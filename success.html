@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvala - Matija & Magdalena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 40px;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: #fff;
+            color: #8B0000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 42px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">✓</div>
+        <h1>Hvala!</h1>
+        <p>Vaša potvrda dolaska je uspješno poslana.</p>
+        <div class="message">
+            <p>Veselimo se što ćemo ovaj poseban dan podijeliti s vama!</p>
+            <p style="margin-top: 20px; font-size: 20px;">
+                <strong>Matija & Magdalena</strong>
+            </p>
+        </div>
+        <a href="/" class="back-link">NATRAG NA POZIVNICU</a>
+    </div>
+</body>
+</html>
