@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matija & Magdalena - Vjenčanje</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: #333;
+            background: #FAF7F2;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 40px;
+        }
+
+        .initials {
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            font-weight: 300;
+            letter-spacing: 20px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 28px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 60px;
+            font-weight: 600;
+            display: block;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .names-section {
+            text-align: center;
+            background: #FAF7F2;
+            padding: 120px 20px;
+        }
+
+        .names {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 300;
+            color: #8B0000;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .ampersand {
+            font-size: 60px;
+            display: block;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .wedding-date {
+            font-size: 32px;
+            letter-spacing: 4px;
+            color: #666;
+            margin-top: 30px;
+            font-weight: 300;
+        }
+
+        .bible-quote {
+            max-width: 700px;
+            margin: 50px auto 0;
+            padding: 40px;
+            font-style: italic;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #555;
+            border-left: 3px solid #8B0000;
+            background: #F5F1E8;
+        }
+
+        .quote-reference {
+            font-size: 16px;
+            text-align: right;
+            margin-top: 20px;
+            font-style: normal;
+            color: #8B0000;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #8B0000;
+            font-weight: 400;
+        }
+
+        .schedule {
+            background: #FAF7F2;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .timeline-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 3px solid #8B0000;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .timeline-content {
+            text-align: center;
+        }
+
+        .timeline-time {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #8B0000;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .timeline-location {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .map-link {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #8B0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .map-link:hover {
+            background: #600000;
+            transform: translateY(-2px);
+        }
+
+        .rsvp-section {
+            background: #F5F1E8;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #FAF7F2;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #F5F1E8;
+            border-radius: 8px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact-info a {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #8B0000;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #8B0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #600000;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: #8B0000;
+            color: #fff;
+        }
+
+        .footer-message {
+            font-size: 28px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .footer-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            letter-spacing: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .initials {
+                font-size: 80px;
+                letter-spacing: 15px;
+            }
+
+            .names {
+                font-size: 48px;
+            }
+
+            .countdown-container {
+                gap: 20px;
+            }
+
+            .countdown-number {
+                font-size: 40px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .timeline-image {
+                margin: 0 auto;
+            }
+
+            .form-container {
+                padding: 30px 20px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%238B0000' width='1920' height='1080'/%3E%3C/svg%3E" alt="Background" class="hero-image" id="heroImage">
+        <div class="hero-content">
+            <div class="initials">M & M</div>
+            <div class="tagline">Za zauvijek</div>
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Dana</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Sati</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minuta</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="30" height="50" viewBox="0 0 30 50">
+                <rect x="5" y="5" width="20" height="35" rx="10" fill="none" stroke="#fff" stroke-width="2"/>
+                <circle cx="15" cy="15" r="3" fill="#fff">
+                    <animate attributeName="cy" from="15" to="30" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Names Section -->
+    <div class="section names-section">
+        <div class="names">
+            Matija<br>
+            <span class="ampersand">&</span>
+            Magdalena
+        </div>
+        <div class="wedding-date">12. RUJNA 2026.</div>
+        <div class="bible-quote">
+            "Ljubav je strpljiva, ljubav je dobrostiva... Sve podnosi, svemu vjeruje, u sve se nada, sve trpi. Ljubav nikada ne prestaje."
+            <div class="quote-reference">- 1 Korinćanima 13:4-8</div>
+        </div>
+    </div>
+
+    <!-- Schedule Section -->
+    <div class="section schedule">
+        <h2 class="section-title">Raspored</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">11:00</div>
+                    <div class="timeline-title">Skupljanje kod Matije</div>
+                    <div class="timeline-location">Početak slavlja</div>
+                    <a href="https://maps.app.goo.gl/3Wi6waLWKFT4J9ZN6?g_st=ic" target="_blank" class="map-link">Vidi na karti</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2">
+                        <circle cx="12" cy="8" r="3"></circle>
+                        <circle cx="8" cy="12" r="2"></circle>
+                        <circle cx="16" cy="12" r="2"></circle>
+                        <path d="M12 11v10"></path>
+                        <path d="M8 14l-3 3"></path>
+                        <path d="M16 14l3 3"></path>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">13:30</div>
+                    <div class="timeline-title">Dolazak kod Magdalene</div>
+                    <div class="timeline-location">Pripreme i okupljanje</div>
+                    <a href="https://maps.app.goo.gl/J6sy9Ua49geTn3L66?g_st=ic" target="_blank" class="map-link">Vidi na karti</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2">
+                        <path d="M12 2L4 7v13h16V7z"></path>
+                        <path d="M12 2v7"></path>
+                        <path d="M9 9h6v11H9z"></path>
+                        <circle cx="12" cy="6" r="1" fill="#8B0000"></circle>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-title">Vjenčanje</div>
+                    <div class="timeline-location">Crkva Gospe od Mora</div>
+                    <a href="https://maps.app.goo.gl/EqTcoCW99FsbaQdG7?g_st=ic" target="_blank" class="map-link">Vidi na karti</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2">
+                        <path d="M6 2L3 12v8a2 2 0 0 0 2 2h2"></path>
+                        <path d="M18 2l3 10v8a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M8 22v-3"></path>
+                        <path d="M16 22v-3"></path>
+                        <path d="M9 19h6"></path>
+                        <circle cx="7" cy="8" r="1" fill="#8B0000"></circle>
+                        <circle cx="17" cy="8" r="1" fill="#8B0000"></circle>
+                    </svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-time">18:00 - 20:00</div>
+                    <div class="timeline-title">Hladni bife</div>
+                    <div class="timeline-location">Svadbena večera</div>
+                    <div class="timeline-time" style="margin-top: 15px;">20:00</div>
+                    <div class="timeline-title">Ulazak u salu i fešta</div>
+                    <a href="https://maps.app.goo.gl/oRLAXEa6eRzzzDGFA?g_st=ic" target="_blank" class="map-link">Vidi na karti</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RSVP Section -->
+    <div class="section rsvp-section">
+        <h2 class="section-title">Potvrdite svoj dolazak</h2>
+        <div class="form-container">
+            <div class="form-intro">
+                Molimo potvrdite svoj dolazak do <strong>30.06.2026.</strong> putem forme niže ili nas kontaktirajte
+            </div>
+            
+            <div class="contact-info">
+                <p><strong>MATIJA:</strong> <a href="tel:+385989135985">+385 98 9135 985</a></p>
+                <p><strong>MAGDALENA:</strong> <a href="tel:+385915135779">+385 91 5135 779</a></p>
+            </div>
+
+            <form name="rsvp" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" id="rsvpForm">
+                <!-- Hidden fields for Netlify -->
+                <input type="hidden" name="form-name" value="rsvp" />
+                <p style="display:none;">
+                    <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
+
+                <div class="form-group">
+                    <label for="ime">Ime *</label>
+                    <input type="text" id="ime" name="ime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prezime">Prezime *</label>
+                    <input type="text" id="prezime" name="prezime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="potvrda">Potvrda dolaska *</label>
+                    <select id="potvrda" name="potvrda" required>
+                        <option value="">Molimo odaberite jednu opciju</option>
+                        <option value="DA - Dolazim">DA - Dolazim</option>
+                        <option value="NE - Ne mogu doći">NE - Ne mogu doći</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="brojGostiju">Broj gostiju koji dolazi sa mnom</label>
+                    <select id="brojGostiju" name="brojGostiju">
+                        <option value="Dolazim sam/a">Dolazim sam/a</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="imenaGostiju">Imena gostiju koji dolaze sa mnom</label>
+                    <input type="text" id="imenaGostiju" name="imenaGostiju" placeholder="Npr: Ana Horvat, Marko Kovač">
+                </div>
+
+                <div class="form-group">
+                    <label for="poruka">Poruka</label>
+                    <textarea id="poruka" name="poruka" placeholder="Vaša poruka za nas..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">POŠALJI POTVRDU</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-message">Sretni smo što ćemo ovaj trenutak podijeliti s vama!</div>
+        <div class="footer-names">Matija & Magdalena</div>
+    </div>
+
+    <script>
+        // Load images
+        function loadImage(id, path) {
+            const img = document.getElementById(id);
+            if (img) {
+                // For hero image, use the GitHub raw content URL
+                const githubUsername = 'letannekretnine-ai';
+                const repoName = 'Vjencanje';
+                const branch = 'main';
+                
+                // Extract filename from path
+                const filename = path.split('/').pop();
+                
+                // Create GitHub raw URL
+                const githubUrl = `https://raw.githubusercontent.com/${githubUsername}/${repoName}/${branch}/${filename}`;
+                
+                img.src = githubUrl;
+                img.onerror = function() {
+                    console.log('Failed to load from GitHub, trying local path:', path);
+                    // Fallback to local path
+                    img.src = filename;
+                };
+            }
+        }
+
+        // Load wedding photos - using the color photo for hero
+        loadImage('heroImage', '/mnt/user-data/uploads/M_M-24.jpg');
+
+        // Countdown Timer
+        const weddingDate = new Date('2026-09-12T15:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+
+            if (distance < 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // Form submission - Netlify handles this automatically
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            // Netlify will handle the submission
+            // We just show a thank you message before redirecting
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.textContent = 'ŠALJEM...';
+            submitBtn.disabled = true;
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
