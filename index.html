@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matija & Magdalena - Vjenčanje</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
     <style>
         /* ==================== GLOBAL RESET ==================== */
@@ -28,7 +37,7 @@
         /* ==================== HERO SECTION ==================== */
         .hero {
             position: relative;
-            height: 100vh;
+            height: 130vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -42,9 +51,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
+            object-position: top;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -65,12 +74,21 @@
         }
 
         .initials {
-            font-family: 'Playfair Display', serif;
+            font-family: 'cinzel', cursive;
             font-size: 120px;
             font-weight: 300;
-            letter-spacing: 20px;
+            letter-spacing: 5px;
+            margin-top: 300px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #F6F1EB;
+        }
+
+        .initials-amp {
+            font-family: 'Parisienne', cursive;
+            font-size: 110px; 
+            color: #F6F1EB; 
+            margin: 0 10px; 
         }
 
         .tagline {
@@ -79,6 +97,7 @@
             text-transform: uppercase;
             margin-bottom: 60px;
             font-weight: 300;
+            color: #F6F1EB;
         }
 
         /* ==================== COUNTDOWN ==================== */
@@ -98,6 +117,7 @@
             font-weight: 600;
             display: block;
             font-family: 'Playfair Display', serif;
+            color: #F6F1EB;
         }
 
         .countdown-label {
@@ -105,6 +125,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-top: 10px;
+            color: #F6F1EB;
         }
 
         /* ==================== SCROLL INDICATOR ==================== */
@@ -118,24 +139,27 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { 
-                transform: translateX(-50%) translateY(0); 
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
             }
-            40% { 
-                transform: translateX(-50%) translateY(-10px); 
+            40% {
+                transform: translateX(-50%) translateY(-10px);
             }
-            60% { 
-                transform: translateX(-50%) translateY(-5px); 
+            60% {
+                transform: translateX(-50%) translateY(-5px);
             }
         }
 
         /* ==================== CONTENT WRAPPER (Border za sadržaj) ==================== */
         .content-wrapper {
-            border: 15px solid #8B0000;
-            margin: 20px;
+            border: 10px solid #8B0000;
+            margin: 25px;
             padding: 0;
             background: #F6F1EB;
             box-sizing: border-box;
+            box-shadow:
+                0 0 0 10px #F6F1EB,   /* razmak */
+                0 0 0 25px #8B0000;   /* vanjski okvir */
         }
 
         /* ==================== GENERAL SECTIONS ==================== */
@@ -147,9 +171,9 @@
 
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 55px;
+            font-size: 58px;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: -50px;
             color: #8B0000;
             font-weight: 300;
             letter-spacing: -2px;
@@ -159,7 +183,7 @@
         /* ==================== NAMES SECTION ==================== */
         .names-section {
             text-align: center;
-            background: #FAF7F2;
+            background: #F6F1EB;
             padding: 120px 20px;
         }
 
@@ -172,7 +196,7 @@
             line-height: 1.2;
         }
 
-       .ampersand {
+        .ampersand {
             font-family: 'Parisienne', cursive;
             font-size: 75px;
             display: block;
@@ -180,29 +204,29 @@
             color: #8B0000;
         }
 
-       .first-name {
-            font-family: 'Cinzel', serif;
-            font-weight: 100;
+        .first-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 1;
             text-transform: uppercase;
-            font-size: 88px;  
-            letter-spacing: -7px;
+            font-size: 120px;
+            letter-spacing: -10px;
             margin-bottom: 0;
-            line-height: 1; 
+            line-height: 1;
         }
 
         .last-name {
             font-family: 'Pinyon Script', cursive;
-            font-weight: 0;
             font-style: normal;
-            font-size: 65px;  
+            font-weight: 1;
+            font-size: 70px;
             letter-spacing: -1px;
-            margin-top: -22px; 
+            margin-top: -22px;
             line-height: 1;
         }
 
         .wedding-date {
             font-family: 'Pinyon Script', cursive;
-            font-size: 80px;
+            font-size: 85px;
             letter-spacing: 4px;
             color: #8B0000;
             margin-top: 30px;
@@ -214,7 +238,7 @@
             font-family: 'Pinyon Script', cursive;
             font-size: 41px;
             color: #8B0000;
-            margin: 60px;
+            margin: 5px;
             margin-top: 200px;
             max-width: 2000px;
             line-height: 1.6;
@@ -223,7 +247,7 @@
         /* ==================== INVITATION TEXT ==================== */
         .invitation-text {
             font-family: 'Cinzel', serif;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
             color: #8B0000;
             letter-spacing: 1px;
@@ -237,7 +261,7 @@
         /* ==================== CLOSING MESSAGE ==================== */
         .closing-message {
             font-family: 'Cinzel', serif;
-            font-size: 23px;
+            font-size: 25px;
             font-weight: 600;
             color: #8B0000;
             letter-spacing: 2px;
@@ -252,141 +276,203 @@
             font-size: 14px;
             font-weight: 600;
             color: #8B0000;
-            margin-top: 10px;
+            margin-top: -15px;
             letter-spacing: 1px;
+            text-align: center;
+            padding-left: 600px;
         }
 
         /* ==================== SCHEDULE SECTION ==================== */
         .schedule {
-            background: #FAF7F2;
+            background: #F6F1EB;
             padding-top: 60px;
         }
 
-        /* ==================== VERTICAL TIMELINE WITH LINE ==================== */
+        /* ==================== VERTICAL TIMELINE (SEGMENTED DASHED) ==================== */
         .timeline-vertical {
-        max-width: 400px;
-        margin: 0 auto;
-        position: relative;
-        padding: 60px 0;
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 30px 0 60px;
+            text-align: center;
         }
 
-        /* Vertikalna linija */
-        .timeline-vertical::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 100px;
-        bottom: 100px;
-        width: 2px;
-        background: #8B0000;
-        transform: translateX(-50%);
-        z-index: 0;
+        .timeline-item {
+            margin: 0;
         }
 
-        .timeline-item-vertical {
-        position: relative;
-        text-align: center;
-        margin-bottom: 120px;
-        z-index: 1;
-        }
-
-        .timeline-item-vertical:last-child {
-        margin-bottom: 0;
-        }
-
-        /* Ikona container */
         .timeline-icon-vertical {
-        width: 90px;
-        height: 90px;
-        margin: 0 auto 25px;
-        position: relative;
-        z-index: 10;
-        background: #FAF7F2;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid #8B0000;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F6F1EB;
         }
 
-        /* SVG ikone */
-        .timeline-icon-vertical svg {
-        width: 50px;
-        height: 50px;
+        .timeline-icon-vertical img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* haljina */
+        .haljina {
+            width: 150px;
+            height: 130px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F6F1EB;
+        }
+
+        .haljina img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+         /* crkva */
+        .crkva {
+            width: 140px;
+            height: 130px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 32px;
+            background: #F6F1EB;
+        }
+
+        .crkva img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+         /* stol */
+        .stol {
+            width: 170px;
+            height: 130px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: -10px;
+            background: #F6F1EB;
+        }
+
+        .stol img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* isprekidani segment (jedan komad linije) */
+        .timeline-connector{
+            width: 2px;
+            height: 170px;
+            margin: 18px auto;
+            border-left: 3px solid #8B0000;
         }
 
         /* Naslov (script font) */
         .timeline-title-script {
-        font-family: 'Pinyon Script', cursive;
-        font-size: 38px;
-        color: #8B0000;
-        margin-bottom: 10px;
-        font-weight: 400;
-        position: relative;
-        z-index: 5;
+            font-family: 'Pinyon Script', cursive;
+            font-size: 50px;
+            color: #8B0000;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 400;
         }
 
         /* Lokacija */
         .timeline-location-vertical {
-        font-family: 'Cinzel', serif;
-        font-size: 12px;
-        color: #8B0000;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 8px;
-        font-weight: 600;
-        position: relative;
-        z-index: 5;
+            font-family: 'Cinzel', serif;
+            font-size: 25px;
+            color: #8B0000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        /* Na karti */
+        .show-map a {
+            color: #8B0000;
+            font-size: 20px;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            text-decoration: underline;
         }
 
         /* Vrijeme */
         .timeline-time-vertical {
-        font-family: 'Cinzel', serif;
-        font-size: 18px;
-        color: #8B0000;
-        font-weight: 600;
-        position: relative;
-        z-index: 5;
+            font-family: 'Cinzel', serif;
+            font-size: 30px;
+            color: #8B0000;
+            font-weight: 600;
         }
 
         /* ==================== RSVP SECTION ==================== */
         .rsvp-section {
-            background: #FAF7F2;
+            background: #F6F1EB;
+        }
+
+        .RSVPtitle {
+            text-align: center;
+            color: #8B0000;
+            margin: 0;
+            margin-bottom: -40px;
+            font-size: 90px;
+            line-height: 1.8;
+            font-family: 'Pinyon Script', cursive;
+            font-weight: 100;
         }
 
         .form-container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-            background: #FAF7F2;
+            background: #F6F1EB;
             padding: 50px;
             border-radius: 10px;
         }
 
         .form-intro {
             text-align: center;
+            color: #8B0000;
+            margin: 0;
             margin-bottom: 40px;
-            font-size: 18px;
+            font-size: 25px;
             line-height: 1.8;
-            color: #666;
+            text-transform: uppercase;
+            font-family: 'Cinzel', serif;
         }
 
         .contact-info {
             text-align: center;
             margin-bottom: 40px;
             padding: 20px;
-            background: #FAF7F2;
+            background: #F6F1EB;
             border-radius: 8px;
+            color: #8B0000;
         }
 
         .contact-info p {
             margin: 10px 0;
-            font-size: 18px;
+            font-size: 30px;
+            font-weight: 100;
         }
 
         .contact-info a {
             color: #8B0000;
+            font-size: 25px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 100;
+            font-family: 'Cinzel', serif;
         }
 
         /* ==================== FORM ELEMENTS ==================== */
@@ -397,19 +483,22 @@
         label {
             display: block;
             margin-bottom: 8px;
-            font-size: 16px;
             color: #333;
-            font-weight: 600;
+            font-weight: 100;
+            color: #8B0000;
+            font-size: 20px;
+            font-family: 'Cinzel', serif;
         }
 
         input, select, textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #8B0000;
             border-radius: 5px;
             font-family: 'Cormorant Garamond', serif;
             font-size: 16px;
             transition: border-color 0.3s;
+            background: #F6F1EB;
         }
 
         input:focus, select:focus, textarea:focus {
@@ -426,7 +515,7 @@
             width: 100%;
             padding: 15px;
             background: #8B0000;
-            color: #fff;
+            color: #F6F1EB;
             border: none;
             border-radius: 5px;
             font-family: 'Playfair Display', serif;
@@ -446,19 +535,52 @@
             text-align: center;
             padding: 60px 20px;
             background: #8B0000;
-            color: #fff;
+            color: #F6F1EB;
         }
 
         .footer-message {
-            font-size: 28px;
-            font-style: italic;
+            font-size: 25px;
             margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
         }
 
         .footer-names {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            letter-spacing: 4px;
+            font-family: 'Pinyon Script', cursive;
+            font-size: 55px;
+            letter-spacing: 2px;
+            font-weight: 10000;
+        }
+
+        .footer-ampersand {
+            color: #F6F1EB;        
+            font-family: 'Parisienne', cursive;  
+            font-size: 42px;       
+        }
+
+        /* ==================== HEART DIVIDER ==================== */
+        .divider {
+            position: relative;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            width: 60%;
+            height: 1px;
+            background: #8B0000;
+            transform: translateY(-50%);
+        }
+
+        .divider .heart {
+            position: relative;
+            background: #F6F1EB; /* same as page background */
+            padding: 0 20px;
+            color: #8B0000;
+            font-size: 28px;
         }
 
         /* ==================== RESPONSIVE - MOBILE ==================== */
@@ -492,6 +614,15 @@
             .section {
                 padding: 60px 20px;
             }
+
+            .timeline-title-script {
+                font-size: 34px;
+            }
+
+            .timeline-icon-vertical {
+                width: 100px;
+                height: 100px;
+            }
         }
     </style>
 </head>
@@ -499,15 +630,15 @@
 <body>
     <!-- ==================== HERO SECTION ==================== -->
     <div class="hero">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%238B0000' width='1920' height='1080'/%3E%3C/svg%3E" 
-             alt="Background" 
-             class="hero-image" 
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%238B0000' width='1920' height='1080'/%3E%3C/svg%3E"
+             alt="Background"
+             class="hero-image"
              id="heroImage">
-        
+
         <div class="hero-content">
-            <div class="initials">M & M</div>
+            <div class="initials">M <span class="initials-amp">&</span> M</div>
             <div class="tagline">Za zauvijek</div>
-            
+
             <div class="countdown-container">
                 <div class="countdown-item">
                     <span class="countdown-number" id="days">0</span>
@@ -523,7 +654,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             <svg width="30" height="50" viewBox="0 0 30 50">
                 <rect x="5" y="5" width="20" height="35" rx="10" fill="none" stroke="#fff" stroke-width="2"/>
@@ -546,11 +677,11 @@
                 <div class="first-name">Matija</div>
                 <div class="last-name">Volarević</div>
             </div>
-            
+
             <!-- Tekst blok 1 - Biblijski citat -->
             <div class="bible-quote-1">
                 "Ja pripadam svome dragom i on je željan mene"
-                <div class="quote-reference">PNP 7,11</div>
+                <div class="quote-reference">-PNP 7,11</div>
             </div>
 
             <!-- Tekst blok 2 - Poziv -->
@@ -567,74 +698,76 @@
             <div class="closing-message">
                 NEKA NAŠA RADOST BUDE I VAŠA!
             </div>
+            <div class="divider">
+                <span class="heart">♥</span>
         </div>
 
         <!-- ==================== SCHEDULE SECTION ==================== -->
         <div class="section schedule">
             <h2 class="section-title">Raspored</h2>
-            
+
+            <!-- NOVI RASPORED (kao na slici: više odvojenih isprekidanih segmenata) -->
             <div class="timeline-vertical">
 
-                <!-- Skupljanje kod Matije -->
-                <div class="timeline-item-vertical">
+                <!-- LINIJA odmah ispod naslova "Raspored" -->
+                 <div class="timeline-connector" style="--h: 80px;"></div>
+
+                <div class="timeline-item">
                     <div class="timeline-icon-vertical">
-                        <svg viewBox="0 0 298 419" fill="#8B0000">
-                            <path d="M 157.445312 9.042969 C 176.015625 9.402344 174.273438 18.402344 184.660156 29.726562 C 194.386719 40.324219 220.65625 55.050781 233.789062 62.003906 C 240.152344 65.371094 247.769531 67.90625 252.953125 73.0625 C 259.878906 79.941406 262.21875 99.347656 264.027344 108.863281 C 265.773438 118.03125 267.816406 127.164062 269.347656 136.375 C 272.621094 156.105469 274.894531 177.757812 276.136719 197.726562 C 276.996094 211.578125 276.984375 225.511719 277.335938 239.390625 L 279.191406 303.960938 C 279.390625 310.875 279.214844 317.855469 279.558594 324.753906 C 279.6875 327.300781 280.039062 327.441406 281.871094 329.078125 C 282.59375 331.054688 281.816406 333.21875 281.542969 335.242188 C 281.382812 336.449219 281.753906 337.03125 282.484375 337.953125 C 282.648438 338.164062 282.832031 338.359375 283.007812 338.558594 C 282.894531 341.648438 281.097656 343.679688 280.472656 346.539062 C 279.199219 352.421875 279.816406 358.40625 278.148438 364.375 C 277.160156 367.898438 277.195312 370.453125 277.449219 374.050781 C 268.003906 374.675781 258.335938 376.464844 248.875 375.753906 C 248.808594 375.515625 248.734375 375.285156 248.664062 375.046875 C 248.5625 374.683594 248.460938 374.316406 248.359375 373.949219 C 246.265625 366.835938 246.753906 358.167969 245.925781 350.714844 C 244.625 338.941406 242.796875 327.238281 241.875 315.421875 L 237.6875 256.601562 C 236.675781 242 236.148438 228.820312 233.871094 214.230469 C 233.363281 210.988281 233.148438 207.234375 231.894531 204.214844 C 231.980469 205.652344 232.054688 207.09375 232.125 208.535156 C 232.191406 210.117188 232.578125 215.609375 231.507812 216.785156 C 230.109375 209.1875 231.5 201.636719 229.859375 193.988281 C 228.929688 198.960938 228.632812 204.015625 227.703125 209.011719 C 226.988281 201.847656 226.816406 194.5625 226.429688 187.378906 C 218.191406 208.71875 216.0625 237.457031 219.960938 260.015625 C 221.050781 266.320312 223.292969 272.410156 224.390625 278.71875 C 225.257812 283.734375 225.53125 288.84375 226.539062 293.839844 C 227.976562 300.980469 230.171875 308.007812 231.824219 315.109375 C 234.628906 327.578125 237.230469 340.09375 239.625 352.652344 C 241.351562 361.394531 244.59375 370.820312 245.242188 379.628906 C 240.992188 385.097656 227.691406 390.117188 221.144531 392.476562 C 209.152344 396.792969 195.238281 401.578125 183.007812 395.519531 C 169.636719 388.898438 160.839844 367.785156 156.445312 354.480469 L 154.566406 348.164062 C 149.890625 348.808594 146.515625 348.726562 141.988281 347.277344 C 137.734375 361.941406 133.097656 379.15625 124.96875 392.207031 C 122.617188 395.980469 119.851562 397.730469 115.488281 398.644531 C 110.695312 399.640625 105.457031 399.320312 100.644531 398.625 C 92.515625 397.449219 60.699219 388.914062 54.640625 384.601562 C 54.402344 384.433594 53.523438 383.75 53.40625 383.566406 C 52.453125 381.992188 55.054688 366.894531 55.570312 364.03125 C 57.304688 354.339844 59.507812 344.75 60.835938 334.984375 C 62.996094 319.074219 64.039062 303.015625 66.242188 287.117188 C 67.488281 278.105469 70.113281 269.457031 71.722656 260.53125 C 73.453125 250.945312 73.453125 240.140625 72.835938 230.425781 C 71.820312 214.628906 66.433594 199.136719 63.902344 183.492188 C 60.414062 196.269531 54.882812 215.496094 53.496094 228.207031 C 52.214844 239.960938 53.394531 252.054688 53.046875 263.875 C 52.695312 275.472656 47.734375 373.765625 46.257812 376.117188 C 45.554688 377.25 43.464844 377.902344 42.234375 378.160156 C 38.480469 378.929688 19.90625 378.925781 16.046875 378.289062 C 14.796875 378.082031 13.960938 377.625 12.925781 376.925781 C 11.910156 375.480469 10.273438 357.871094 10.132812 354.8125 C 9.632812 343.6875 10.4375 332.492188 10.207031 321.335938 C 9.449219 284.167969 8.640625 247.09375 9.828125 209.914062 C 10.261719 192.378906 11.457031 174.898438 13.414062 157.46875 C 15.453125 138.914062 20.554688 81.464844 31.917969 69.640625 C 35.355469 66.0625 50.691406 61.316406 56.199219 58.375 C 62.265625 55.128906 68.242188 51.722656 74.347656 48.5625 C 80.8125 45.214844 87.507812 42.167969 93.597656 38.15625 C 101.105469 33.214844 108.078125 27.027344 115.105469 21.398438 C 115.894531 18.78125 117.308594 15.691406 119.132812 13.636719 C 120.167969 12.472656 121.476562 11.503906 122.976562 11.050781 C 129.730469 8.988281 149.160156 9.371094 157.445312 9.042969 Z"/>
-                        </svg>
+                        <img src="ikona odjela.png" alt="" aria-hidden="true">
                     </div>
-                    <div class="timeline-title-script">Skupljanje kod Matije</div>
-                    <div class="timeline-location-vertical">PUČIŠĆA</div>
+                    <div class="timeline-title-script">Okupljanje kod Matije</div>
+                    <div class="timeline-location-vertical">PEROJ 450B</div>
+                    <div class="show-map">
+                        <a href="https://maps.app.goo.gl/ZcRqMac8aLs6qyRK7?g_st=ic" target="_blank"> VIDI NA KARTI
+                        </a>   
+                    </div>
                     <div class="timeline-time-vertical">11:00</div>
                 </div>
 
-                <!-- Dolazak kod Magdalene -->
-                <div class="timeline-item-vertical">
-                    <div class="timeline-icon-vertical">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="1.5">
-                            <circle cx="12" cy="8" r="3"></circle>
-                            <circle cx="8" cy="12" r="2"></circle>
-                            <circle cx="16" cy="12" r="2"></circle>
-                            <path d="M12 11v10"></path>
-                            <path d="M8 14l-3 3"></path>
-                            <path d="M16 14l3 3"></path>
-                        </svg>
+                <div class="timeline-connector" style="--h: 70px;"></div>
+
+                <div class="timeline-item">
+                    <div class="haljina">
+                        <img src="Ikona Haljine 2.png" alt="" aria-hidden="true">
                     </div>
-                    <div class="timeline-title-script">Skupljanje kod Magdalene</div>
-                    <div class="timeline-location-vertical">OKARINA PRILJAZ 18</div>
+                    <div class="timeline-title-script">Okupljanje kod Magdalene</div>
+                    <div class="timeline-location-vertical">CAPRINOV PRILAZ 18</div>
+                    <div class="show-map">
+                        <a href="https://maps.app.goo.gl/wLKRX9CJuv5vXXD87?g_st=ic" target="_blank">VIDI NA KARTI
+                        </a>   
+                    </div>
                     <div class="timeline-time-vertical">13:00</div>
                 </div>
 
-                <!-- Vjenčanje -->
-                <div class="timeline-item-vertical">
-                    <div class="timeline-icon-vertical">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="1.5">
-                            <path d="M12 2L4 7v13h16V7z"></path>
-                            <path d="M12 2v7"></path>
-                            <path d="M9 9h6v11H9z"></path>
-                            <circle cx="12" cy="6" r="1" fill="#8B0000"></circle>
-                        </svg>
+                <div class="timeline-connector" style="--h: 85px;"></div>
+
+                <div class="timeline-item">
+                    <div class="crkva">
+                        <img src="Ikona Crkve.png" alt="" aria-hidden="true">
                     </div>
                     <div class="timeline-title-script">Vjenčanje</div>
                     <div class="timeline-location-vertical">CRKVA GOSPE OD MORA</div>
+                    <div class="show-map">
+                        <a href="https://maps.app.goo.gl/j7hhLGSfXx5qxoAZA?g_st=ic" target="_blank">VIDI NA KARTI
+                        </a>   
+                    </div>
                     <div class="timeline-time-vertical">15:00</div>
                 </div>
 
-                <!-- Večera i fešta -->
-                <div class="timeline-item-vertical">
-                    <div class="timeline-icon-vertical">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="1.5">
-                            <path d="M6 2L3 12v8a2 2 0 0 0 2 2h2"></path>
-                            <path d="M18 2l3 10v8a2 2 0 0 1-2 2h-2"></path>
-                            <path d="M8 22v-3"></path>
-                            <path d="M16 22v-3"></path>
-                            <path d="M9 19h6"></path>
-                            <circle cx="7" cy="8" r="1" fill="#8B0000"></circle>
-                            <circle cx="17" cy="8" r="1" fill="#8B0000"></circle>
-                        </svg>
+                <div class="timeline-connector" style="--h: 80px;"></div>
+
+                <div class="timeline-item">
+                    <div class="stol">
+                        <img src="Ikona Stola.png" alt="" aria-hidden="true">
                     </div>
-                    <div class="timeline-title-script">Večera i fešta</div>
-                    <div class="timeline-location-vertical">RESTORAN XYZ</div>
-                    <div class="timeline-time-vertical">18:00</div>
+                    <div class="timeline-title-script">Svadbena večera</div>
+                    <div class="timeline-location-vertical">D'ORANGERIE, FUNTANA</div>
+                     <div class="show-map">
+                        <a href="https://maps.app.goo.gl/H15eE6Q7wKvkpCAT6?g_st=ic" target="_blank">VIDI NA KARTI
+                        </a>   
+                    </div>
+                    <div class="timeline-time-vertical">20:00</div>
                 </div>
 
             </div>
@@ -642,13 +775,13 @@
 
         <!-- ==================== RSVP SECTION ==================== -->
         <div class="section rsvp-section">
-            <h2 class="section-title">Potvrdite svoj dolazak</h2>
-            
+            <h2 class="RSVPtitle">Potvrdite svoj dolazak</h2>
+
             <div class="form-container">
                 <div class="form-intro">
-                    Molimo potvrdite svoj dolazak do <strong>30.06.2026.</strong> putem forme niže ili nas kontaktirajte
+                    Molimo potvrdite svoj dolazak do <strong>30.07.2026.</strong> putem forme niže ili nas kontaktirajte
                 </div>
-                
+
                 <div class="contact-info">
                     <p><strong>MATIJA:</strong> <a href="tel:+385989135985">+385 98 9135 985</a></p>
                     <p><strong>MAGDALENA:</strong> <a href="tel:+385915135779">+385 91 5135 779</a></p>
@@ -661,17 +794,12 @@
                     </p>
 
                     <div class="form-group">
-                        <label for="ime">Ime *</label>
+                        <label for="ime">Ime i Prezime</label>
                         <input type="text" id="ime" name="ime" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="prezime">Prezime *</label>
-                        <input type="text" id="prezime" name="prezime" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="potvrda">Potvrda dolaska *</label>
+                        <label for="potvrda">Potvrda dolaska</label>
                         <select id="potvrda" name="potvrda" required>
                             <option value="">Molimo odaberite jednu opciju</option>
                             <option value="DA - Dolazim">DA - Dolazim</option>
@@ -709,7 +837,7 @@
         <!-- ==================== FOOTER ==================== -->
         <div class="footer">
             <div class="footer-message">Sretni smo što ćemo ovaj trenutak podijeliti s vama!</div>
-            <div class="footer-names">Matija & Magdalena</div>
+            <div class="footer-names">Matija <span class="footer-ampersand">&</span> Magdalena</div>
         </div>
 
     </div>
@@ -725,7 +853,7 @@
                 const branch = 'main';
                 const filename = path.split('/').pop();
                 const githubUrl = `https://raw.githubusercontent.com/${githubUsername}/${repoName}/${branch}/${filename}`;
-                
+
                 img.src = githubUrl;
                 img.onerror = function() {
                     console.log('Failed to load from GitHub, trying local path:', path);
