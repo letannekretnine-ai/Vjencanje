@@ -577,7 +577,7 @@
 
         .divider .heart {
             position: relative;
-            background: #F6F1EB; /* same as page background */
+            background: #F6F1EB;
             padding: 0 20px;
             color: #8B0000;
             font-size: 28px;
@@ -585,43 +585,266 @@
 
         /* ==================== RESPONSIVE - MOBILE ==================== */
         @media (max-width: 768px) {
+            /* Content wrapper */
             .content-wrapper {
-                border: 10px solid #8B0000;
+                border: 5px solid #8B0000;
                 margin: 10px;
+                box-shadow:
+                    0 0 0 5px #F6F1EB,
+                    0 0 0 15px #8B0000;
+            }
+
+            /* Hero section */
+            .hero {
+                height: 100vh;
             }
 
             .initials {
-                font-size: 80px;
-                letter-spacing: 15px;
+                font-size: 60px;
+                letter-spacing: 3px;
+                margin-top: 150px;
             }
 
-            .names {
-                font-size: 48px;
+            .initials-amp {
+                font-size: 70px;
             }
 
+            .tagline {
+                font-size: 16px;
+                letter-spacing: 3px;
+                margin-bottom: 30px;
+            }
+
+            /* Countdown */
             .countdown-container {
-                gap: 20px;
+                gap: 15px;
             }
 
             .countdown-number {
-                font-size: 40px;
+                font-size: 36px;
             }
 
-            .form-container {
-                padding: 30px 20px;
+            .countdown-label {
+                font-size: 11px;
+                letter-spacing: 1px;
             }
 
-            .section {
-                padding: 60px 20px;
+            /* Names section */
+            .names-section {
+                padding: 60px 15px;
+            }
+
+            .first-name {
+                font-size: 55px;
+                letter-spacing: -5px;
+            }
+
+            .last-name {
+                font-size: 35px;
+                margin-top: -12px;
+            }
+
+            .ampersand {
+                font-size: 45px;
+                margin: 12px 0;
+            }
+
+            /* Bible quote */
+            .bible-quote-1 {
+                font-size: 24px;
+                margin: 40px 15px;
+                margin-top: 80px;
+                line-height: 1.5;
+            }
+
+            .quote-reference {
+                font-size: 11px;
+                padding-left: 0;
+                text-align: right;
+                padding-right: 15px;
+                margin-top: -12px;
+            }
+
+            /* Invitation text - STAYS ON 3 LINES */
+            .invitation-text {
+                font-size: 11px;
+                margin: 30px auto;
+                margin-top: 60px;
+                padding: 0 10px;
+                line-height: 1.7;
+                max-width: 90%;
+            }
+
+            /* Wedding date */
+            .wedding-date {
+                font-size: 45px;
+                margin-top: 15px;
+                letter-spacing: 2px;
+            }
+
+            /* Closing message - STAYS ON 1 LINE */
+            .closing-message {
+                font-size: 11px;
+                letter-spacing: 0.5px;
+                margin-top: 25px;
+                margin-bottom: 35px;
+                padding: 0 10px;
+            }
+
+            /* Section title */
+            .section-title {
+                font-size: 34px;
+                margin-bottom: -25px;
+                letter-spacing: -1px;
+            }
+
+            /* Timeline */
+            .timeline-vertical {
+                max-width: 100%;
+                padding: 20px 0 40px;
+            }
+
+            .timeline-connector {
+                height: 80px;
+                margin: 12px auto;
+                border-left: 2px solid #8B0000;
+            }
+
+            /* Ikona Odjela (kuća) */
+            .timeline-icon-vertical {
+                width: 90px;
+                height: 90px;
+                margin: 0 auto 10px;
+            }
+
+            /* Ikona Haljine */
+            .haljina {
+                width: 105px;
+                height: 90px;
+                margin: 0 auto 10px;
+            }
+
+            /* Ikona Crkve */
+            .crkva {
+                width: 98px;
+                height: 90px;
+                margin: 25px auto 20px;
+            }
+
+            /* Ikona Stola */
+            .stol {
+                width: 120px;
+                height: 90px;
+                margin: 25px auto -5px;
             }
 
             .timeline-title-script {
-                font-size: 34px;
+                font-size: 28px;
+                margin-top: 12px;
+                margin-bottom: 6px;
             }
 
-            .timeline-icon-vertical {
-                width: 100px;
-                height: 100px;
+            .timeline-location-vertical {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                margin-bottom: 5px;
+            }
+
+            .show-map a {
+                font-size: 12px;
+            }
+
+            .timeline-time-vertical {
+                font-size: 20px;
+            }
+
+            /* RSVP section */
+            .RSVPtitle {
+                font-size: 48px;
+                margin-bottom: -15px;
+            }
+
+            .form-container {
+                padding: 25px 15px;
+            }
+
+            /* Form intro - STAYS ON 2 LINES */
+            .form-intro {
+                font-size: 12px;
+                margin-bottom: 25px;
+                line-height: 1.6;
+                letter-spacing: 0.3px;
+            }
+
+            .contact-info {
+                padding: 15px;
+                margin-bottom: 30px;
+            }
+
+            .contact-info p {
+                font-size: 18px;
+                margin: 8px 0;
+            }
+
+            .contact-info a {
+                font-size: 16px;
+            }
+
+            label {
+                font-size: 15px;
+                margin-bottom: 6px;
+            }
+
+            input, select, textarea {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .submit-btn {
+                font-size: 15px;
+                padding: 12px;
+                letter-spacing: 1.5px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 35px 15px;
+            }
+
+            /* Footer message - STAYS ON 1 LINE */
+            .footer-message {
+                font-size: 13px;
+                margin-bottom: 12px;
+                letter-spacing: 0.3px;
+            }
+
+            .footer-names {
+                font-size: 36px;
+                letter-spacing: 1px;
+            }
+
+            .footer-ampersand {
+                font-size: 30px;
+            }
+
+            /* Heart divider */
+            .divider {
+                margin: 35px 0;
+            }
+
+            .divider::before {
+                right: 15%;
+                width: 70%;
+            }
+
+            .divider .heart {
+                font-size: 20px;
+                padding: 0 12px;
+            }
+
+            /* General sections */
+            .section {
+                padding: 50px 12px;
             }
         }
     </style>
@@ -700,13 +923,13 @@
             </div>
             <div class="divider">
                 <span class="heart">♥</span>
+            </div>
         </div>
 
         <!-- ==================== SCHEDULE SECTION ==================== -->
         <div class="section schedule">
             <h2 class="section-title">Raspored</h2>
 
-            <!-- NOVI RASPORED (kao na slici: više odvojenih isprekidanih segmenata) -->
             <div class="timeline-vertical">
 
                 <!-- LINIJA odmah ispod naslova "Raspored" -->
